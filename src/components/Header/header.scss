@@ -1,0 +1,76 @@
+@mixin flexbox($flex, $jc, $ai, $gap, $fd) {
+  display: $flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $gap;
+  flex-direction: $fd;
+}
+
+$link-color: #000000;
+$btn-color: #FFFFFF;
+$btn-bg-color: #FF9635;
+
+.header {
+  padding: {
+    top: 40px;
+  }
+
+  .nav {
+    @include flexbox(flex, space-between, center, stretch, row);
+
+    &__box {
+      &:nth-child(1) {
+        @include flexbox(flex, center, center, 110px, row);
+      }
+
+      &_list {
+        @include flexbox(flex, stretch, center, 55px, row);
+
+        &_item {
+          &-link {
+            font-weight: 400;
+            font-size: 26px;
+            line-height: 30px;
+            color: $link-color;
+          }
+        }
+      }
+
+      &-btn {
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 27px;
+        background-color: $btn-bg-color;
+        color: $btn-color;
+        border-radius: 6px;
+        border: 1px solid $btn-bg-color;
+        font-family: "Rowdies";
+        padding: {
+          top: 9px;
+          bottom: 9px;
+          right: 20px;
+          left: 20px;
+        }
+
+        cursor: pointer;
+        transition: all .2s linear;
+        -webkit-transition: all .2s linear;
+        -moz-transition: all .2s linear;
+        -ms-transition: all .2s linear;
+        -o-transition: all .2s linear;
+
+        &:hover{
+          color: $btn-bg-color;
+          background-color: transparent;
+        }
+      }
+
+      &_link {
+        &-logo {
+          width: 108px;
+          height: 48px;
+        }
+      }
+    }
+  }
+}

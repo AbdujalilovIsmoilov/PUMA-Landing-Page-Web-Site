@@ -1,0 +1,218 @@
+@mixin flexbox($flex, $jc, $ai, $gap, $fd) {
+  display: $flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $gap;
+  flex-direction: $fd;
+}
+
+@mixin grid($grid, $gtc, $jc, $ai, $gap, $fd) {
+  display: $grid;
+  grid-template-columns: $gtc;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $gap;
+  flex-direction: $fd;
+}
+
+$title-color: #000000;
+$fa-angle-right-icon: #FFABAB;
+$icon-color: #FFFFFF;
+$dawn-icon-color: #535353;
+$after-color: #4E4E4E;
+$btn-bg-color: #FF9635;
+
+.main {
+  &__container {
+    @include flexbox(flex, space-between, flex-start, stretch, row);
+
+    margin: {
+      top: 123px;
+    }
+
+    &_box {
+      position: relative;
+
+      &-title {
+        max-width: 515px;
+        height: 246px;
+        font-weight: 500;
+        font-size: 70px;
+        line-height: 82px;
+        color: $title-color;
+        font-family: "Poppins";
+
+        margin: {
+          top: 43px;
+        }
+
+      }
+
+      &-description {
+        font-weight: 300;
+        font-size: 19px;
+        line-height: 28px;
+        color: $title-color;
+        max-width: 453px;
+
+        margin: {
+          top: 34px;
+        }
+      }
+
+      &-img {
+        height: 417px;
+
+        margin: {
+          right: 66px;
+        }
+      }
+
+      .fa-angle-right {
+        @include flexbox(flex, center, center, stretch, row);
+        position: absolute;
+        top: 40%;
+        right: 0;
+        height: 69px;
+        width: 69px;
+        border: 1px solid $fa-angle-right-icon;
+        background-color: $fa-angle-right-icon;
+        color: $icon-color;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        font-size: 45px;
+        cursor: pointer;
+        transition: all .3s linear;
+        -webkit-transition: all .3s linear;
+        -moz-transition: all .3s linear;
+        -ms-transition: all .3s linear;
+        -o-transition: all .3s linear;
+
+        &:hover {
+          background-color: transparent;
+          color: $fa-angle-right-icon;
+        }
+      }
+    }
+  }
+
+  &__buy {
+    background-color: $icon-color;
+    box-shadow: 0px 7px 30px rgba(147, 147, 147, 0.25);
+    border-radius: 10px;
+    height: 129px;
+    max-width: 790px;
+
+    margin: {
+      top: 35px;
+    }
+
+    padding: {
+      right: 18px;
+      left: 42px;
+      top: 18px;
+    }
+
+    &_container {
+      @include grid(grid, repeat(5, auto), space-between, flex-start, stretch, row);
+
+      &_box {
+        position: relative;
+
+        &-name {
+          font-weight: 300;
+          font-size: 19px;
+          line-height: 28px;
+          font-family: 'Poppins';
+          color: $title-color;
+          text-align: center;
+        }
+
+        &-title {
+          font-weight: 500;
+          font-size: 19px;
+          line-height: 28px;
+          font-family: 'Poppins';
+          color: $title-color;
+
+
+          margin: {
+            top: 10px;
+          }
+
+          cursor: pointer;
+
+          .fa-chevron-down {
+            margin: {
+              left: 7.4px;
+            }
+
+            color: $dawn-icon-color;
+          }
+        }
+
+        &:nth-child(1)::after {
+          border: 1px solid $title-color;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 45px;
+          right: -60px;
+          width: 50px;
+          height: 0px;
+          border: 1.2px solid $after-color;
+          transform: rotate(-90deg);
+        }
+
+        &:nth-child(4)::after {
+          content: "";
+          display: none;
+        }
+
+        &:nth-child(5)::after {
+          content: "";
+          display: none;
+        }
+
+        &-btn {
+          font-weight: 300;
+          font-size: 22px;
+          line-height: 27px;
+          color: $icon-color;
+          background-color: $btn-bg-color;
+          border: 1px solid $btn-bg-color;
+          cursor: pointer;
+
+          margin: {
+            top: 20px;
+          }
+
+          padding: {
+            top: 9px;
+            bottom: 9px;
+            right: 20px;
+            left: 20px;
+          }
+
+          border-radius: 6px;
+          font-family: "Rowdies";
+          transition: all .3s linear;
+          -webkit-transition: all .3s linear;
+          -moz-transition: all .3s linear;
+          -ms-transition: all .3s linear;
+          -o-transition: all .3s linear;
+
+          &:hover {
+            background-color: transparent;
+            color: $btn-bg-color;
+          }
+        }
+      }
+    }
+  }
+}
