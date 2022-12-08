@@ -1,0 +1,52 @@
+$video-color: #FF8947;
+$title-color: #000000;
+
+@mixin flexbox($flex, $jc, $ai, $gap, $fd) {
+  display: $flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $gap;
+  flex-direction: $fd;
+}
+
+.video {
+  margin: {
+    top: 128px;
+  }
+
+  &__container {
+    @include flexbox(flex, space-between, center, stretch, row);
+
+    &_box {
+      &-video {
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 39px;
+        color: $video-color;
+        font-family: "Poppins";
+      }
+
+      &-title {
+        font-weight: 500;
+        font-size: 55px;
+        line-height: 64px;
+        color: $title-color;
+        max-width: 496px;
+
+        margin: {
+          top: 9px;
+          bottom: 9px;
+        }
+      }
+
+      &-description {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 27px;
+        font-family: "Poppins";
+        max-width: 503px;
+        height: 81px;
+      }
+    }
+  }
+}
