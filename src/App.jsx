@@ -7,13 +7,13 @@ import { Footer } from "./components/Footer/Footer";
 
 export const App = () => {
   return (
-    <>
+    <div className="App">
       <Header logo="../../../images/logo/logo.svg" />
-      {/* <Main footwear="../images/main/footwear.svg" />
+      <Main footwear="../images/main/footwear.svg" />
       <Video video="../../../images/section/video.svg" />
       <Feature />
       <SignUp SignUpImg="../../../../images/section/SignUp-img.svg" />
-      <Footer object={{ intro: "../../../images/logo/logo.svg" }} /> */}
-    </>
+      <Footer object={{ intro: "../../../images/logo/logo.svg" }} />
+    </div>
   );
 };

@@ -215,3 +215,77 @@ $btn-bg-color: #FF9635;
     }
   }
 }
+
+
+@media only screen and (max-width: 1265px) {
+  .main {
+    &__container {
+      &_box {
+        &-title {
+          font-size: 60px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .main {
+    &__container {
+      &_box {
+        &-title {
+          font-size: 55px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1170px) {
+  .main {
+    &__container {
+      margin: {
+        top: 50px;
+      }
+    }
+
+    &__buy {
+      display: none;
+    }
+
+    &__container {
+      &_box {
+        &-img {
+          display: none;
+        }
+
+        .fa-angle-right {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 455px) {
+  .main {
+    &__container {
+      margin: {
+        top: 10px;
+      }
+    }
+
+    &__buy {
+      display: none;
+    }
+
+    &__container {
+      &_box {
+        &-title {
+          font-size: 40px;
+          line-height: 55px;
+        }
+      }
+    }
+  }
+}

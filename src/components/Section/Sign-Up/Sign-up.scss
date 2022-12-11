@@ -14,17 +14,20 @@ $input-border: #FFFFFF;
 
 .SignUp {
   &__container {
-    @include flexbox(flex, center, flex-start, 0, row);
+    @include flexbox(flex, space-between, flex-start, 0, row);
     background: linear-gradient(90deg, $SignUp-First-color 0%, $SignUp-Second-color 100%);
     border-radius: 15px;
     height: 374px;
+
+    padding: {
+      right: 40px;
+      bottom: 25px;
+    }
 
     &_box {
       &-img {
         height: 374px;
         max-width: 576px;
-        position: relative;
-        right: 35px;
       }
 
       &-title {
@@ -116,4 +119,263 @@ $input-border: #FFFFFF;
       }
     }
   }
+}
+
+@media only screen and (max-width: 1323px) {
+  .SignUp {
+    &__container {
+      @include flexbox(flex, flex-start, flex-start, 0, row);
+      height: 374px;
+      background: linear-gradient(90deg, $SignUp-First-color 0%, $SignUp-Second-color 100%);
+
+      &_box {
+        &-img {
+          display: none;
+        }
+      }
+
+      padding: {
+        right: 40px;
+        bottom: 25px;
+        left: 40px;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 785px) {
+  .SignUp {
+    &__container {
+      height: 350px;
+
+      &_box {
+        &-title {
+          margin: {
+            top: 20px;
+            bottom: 20px;
+          }
+
+          font-size: 35px;
+          line-height: 45px;
+        }
+
+        &_form {
+          &-text {
+            width: 100%;
+
+            margin: {
+              top: 25px;
+              bottom: 15px;
+            }
+
+            padding: {
+              top: 12px;
+              bottom: 12px;
+            }
+
+            border-radius: 5px 7px 7px 5px;
+          }
+
+          &-submit {
+            position: relative;
+            right: 0;
+            top: 0;
+            width: 100%;
+
+            padding: {
+              top: 12px;
+              bottom: 12px;
+              right: 0;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+@media only screen and (max-width: 580px) {
+  .SignUp {
+    &__container {
+      padding: {
+        right: 25px;
+        left: 25px;
+      }
+
+      height: 350px;
+
+      &_box {
+        &-title {
+          margin: {
+            top: 20px;
+            bottom: 20px;
+          }
+
+          font-size: 25px;
+          line-height: 45px;
+        }
+
+        &-description {
+          font-size: 15px;
+        }
+
+        &_form {
+          &-text {
+            width: 100%;
+
+            margin: {
+              top: 25px;
+              bottom: 15px;
+            }
+
+            padding: {
+              top: 12px;
+              bottom: 12px;
+            }
+
+            border-radius: 5px 7px 7px 5px;
+          }
+
+          &-submit {
+            position: relative;
+            right: 0;
+            top: 0;
+            width: 100%;
+
+            padding: {
+              top: 12px;
+              bottom: 12px;
+              right: 0;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+@media only screen and (max-width: 412px) {
+  .SignUp {
+    &__container {
+      height: 350px;
+
+      &_box {
+        &-title {
+          margin: {
+            top: 20px;
+            bottom: 0px;
+          }
+
+          font-size: 22px;
+          line-height: 40px;
+        }
+
+        &-description {
+          font-size: 14px;
+        }
+
+        &_form {
+          &-text {
+            width: 100%;
+
+            margin: {
+              top: 25px;
+              bottom: 15px;
+            }
+
+            text-indent: 16px;
+            font-size: 16px;
+
+            padding: {
+              top: 12px;
+              bottom: 12px;
+            }
+
+            border-radius: 5px 7px 7px 5px;
+          }
+
+          &-submit {
+            position: relative;
+            right: 0;
+            top: 0;
+            width: 100%;
+
+            padding: {
+              top: 12px;
+              bottom: 12px;
+              right: 0;
+              left: 0;
+            }
+
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 375px) {
+  .SignUp {
+    &__container {
+      height: 340px;
+
+      &_box {
+        &-title {
+          margin: {
+            top: 20px;
+            bottom: 0px;
+          }
+
+          font-size: 20px;
+          line-height: 35px;
+        }
+
+        &-description {
+          font-size: 14px;
+        }
+
+        &_form {
+          &-text {
+            width: 100%;
+
+            margin: {
+              top: 25px;
+              bottom: 15px;
+            }
+
+            padding: {
+              top: 12px;
+              bottom: 12px;
+            }
+
+            border-radius: 5px 7px 7px 5px;
+          }
+
+          &-submit {
+            position: relative;
+            right: 0;
+            top: 0;
+            width: 100%;
+
+            padding: {
+              top: 12px;
+              bottom: 12px;
+              right: 0;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
