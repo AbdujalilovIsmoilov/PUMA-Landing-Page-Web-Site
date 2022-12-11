@@ -1,0 +1,119 @@
+@mixin flexbox($flex, $jc, $ai, $gap, $fd) {
+  display: $flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $gap;
+  flex-direction: $fd;
+}
+
+$SignUp-First-color: #FD746C;
+$SignUp-Second-color: #FF9068;
+$title-color: #000000;
+$placeholder-color: #686868;
+$input-border: #FFFFFF;
+
+.SignUp {
+  &__container {
+    @include flexbox(flex, center, flex-start, 0, row);
+    background: linear-gradient(90deg, $SignUp-First-color 0%, $SignUp-Second-color 100%);
+    border-radius: 15px;
+    height: 374px;
+
+    &_box {
+      &-img {
+        height: 374px;
+        max-width: 576px;
+        position: relative;
+        right: 35px;
+      }
+
+      &-title {
+        font-weight: 400;
+        font-size: 45px;
+        line-height: 68px;
+        color: $title-color;
+        font-family: 'Poppins';
+
+        margin: {
+          top: 41px;
+          bottom: 39px;
+        }
+      }
+
+      &-description {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 27px;
+        font-family: 'Poppins';
+        color: $title-color;
+        max-width: 619px;
+      }
+
+      &_form {
+        position: relative;
+
+        &-text {
+          width: 614px;
+          font-family: 'Poppins';
+          color: $placeholder-color;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 27px;
+
+          &::placeholder {
+            color: $placeholder-color;
+          }
+
+          text-indent: 28px;
+
+          padding: {
+            top: 12px;
+            bottom: 12px;
+          }
+
+          outline: none;
+          background-color: rgba(255, 255, 255, 0.65);
+          border: 2px solid $input-border;
+          border-radius: 5px 7px 7px 5px;
+
+          margin: {
+            top: 55px;
+          }
+        }
+
+        &-submit {
+          position: absolute;
+          right: 5px;
+          top: 55px;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 27px;
+          font-family: 'Poppins';
+          color: $title-color;
+          background-color: $input-border;
+          border-radius: 5px 7px 7px 5px;
+          border: 1px solid $input-border;
+
+          padding: {
+            top: 12px;
+            bottom: 12px;
+            right: 24px;
+            left: 24px;
+          }
+
+          cursor: pointer;
+          transition: all .2s linear;
+          -webkit-transition: all .3s linear;
+          -moz-transition: all .3s linear;
+          -ms-transition: all .3s linear;
+          -o-transition: all .3s linear;
+
+          &:hover {
+            background-color: transparent;
+            color: $placeholder-color;
+          }
+        }
+      }
+    }
+  }
+}

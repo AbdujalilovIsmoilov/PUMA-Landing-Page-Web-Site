@@ -22,7 +22,7 @@ export const Main = (props) => {
               title="footwear"
               className="main__container_box-img"
             />
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <i className="fa fa-angle-right" aria-hidden="true"></i>
           </div>
         </div>
         <div className="main__buy">
@@ -31,28 +31,28 @@ export const Main = (props) => {
               <p className="main__buy_container_box-name">Brand</p>
               <h4 className="main__buy_container_box-title">
                 Puma
-                <i class="fa-solid fa-chevron-down"></i>
+                <i className="fa-solid fa-chevron-down"></i>
               </h4>
             </div>
             <div className="main__buy_container_box">
               <p className="main__buy_container_box-name">Person</p>
               <h4 className="main__buy_container_box-title">
                 man
-                <i class="fa-solid fa-chevron-down"></i>
+                <i className="fa-solid fa-chevron-down"></i>
               </h4>
             </div>
             <div className="main__buy_container_box">
               <p className="main__buy_container_box-name">Size</p>
               <h4 className="main__buy_container_box-title">
                 large
-                <i class="fa-solid fa-chevron-down"></i>
+                <i className="fa-solid fa-chevron-down"></i>
               </h4>
             </div>
             <div className="main__buy_container_box">
               <p className="main__buy_container_box-name">Price</p>
               <h4 className="main__buy_container_box-title">
                 $150
-                <i class="fa-solid fa-chevron-down"></i>
+                <i className="fa-solid fa-chevron-down"></i>
               </h4>
             </div>
             <div className="main__buy_container_box">

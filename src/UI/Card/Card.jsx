@@ -15,7 +15,7 @@ export const Card = (props) => {
         <p className="Feature__container_box-description">{description}</p>
         <a href="#" className="Feature__container_box-link">
           {link}
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
+          <i className="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
     </section>
