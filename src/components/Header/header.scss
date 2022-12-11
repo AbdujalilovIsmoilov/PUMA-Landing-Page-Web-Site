@@ -45,6 +45,7 @@ $btn-bg-color: #FF9635;
         border-radius: 6px;
         border: 1px solid $btn-bg-color;
         font-family: "Rowdies";
+
         padding: {
           top: 9px;
           bottom: 9px;
@@ -59,7 +60,7 @@ $btn-bg-color: #FF9635;
         -ms-transition: all .2s linear;
         -o-transition: all .2s linear;
 
-        &:hover{
+        &:hover {
           color: $btn-bg-color;
           background-color: transparent;
         }
@@ -70,6 +71,63 @@ $btn-bg-color: #FF9635;
           width: 108px;
           height: 48px;
         }
+      }
+    }
+
+    .fa-bars {
+      font-size: 30px;
+      cursor: pointer;
+      color: $link-color;
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .header{
+    .nav{
+      &__box{
+        &:nth-child(1) {
+          @include flexbox(flex, center, center, 50px, row);
+        }
+        &_list{
+          &_item{
+            &-link{
+              font-size: 23px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 845px){
+  .header{
+    .nav {
+      &__box{
+        &_list{
+          @include flexbox(flex, stretch, center, 30px, row);
+        }
+      }
+     
+    }
+  }
+}
+
+@media only screen and (max-width: 755px) {
+  .header {
+    .nav{
+      &__box{
+        &_list{
+          display: none;
+        }
+        &-btn{
+          display: none;
+        }
+      }
+      .fa-bars{
+        display: block;
       }
     }
   }

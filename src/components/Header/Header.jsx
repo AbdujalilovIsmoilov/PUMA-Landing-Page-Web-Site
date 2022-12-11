@@ -42,6 +42,7 @@ const Header = (props) => {
               Buy Now
             </button>
           </div>
+          <i className="fa fa-bars"></i>
         </nav>
       </div>
     </header>
