@@ -1,12 +1,12 @@
 export const Card = (props) => {
   const { img, title, description, link } = props.object;
+  const {imgs} = img;
   return (
     <section className="Card">
-      <div className="Feature__container_box">
         <div className="Feature__container_box_small">
           <img
             className="Feature__container_box_small-img"
-            src={img}
+            src={imgs}
             alt="feature-icon"
             title="feature-icon"
           />
@@ -17,7 +17,6 @@ export const Card = (props) => {
           {link}
           <i className="fa fa-angle-right" aria-hidden="true"></i>
         </a>
-      </div>
     </section>
   );
 };

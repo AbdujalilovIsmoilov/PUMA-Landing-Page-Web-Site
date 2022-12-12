@@ -1,7 +1,7 @@
 import "./footer.scss";
 
 export const Footer = (props) => {
-  const { intro } = props.object;
+  const { intro } = props;
   return (
     <footer className="Footer">
       <div className="container">

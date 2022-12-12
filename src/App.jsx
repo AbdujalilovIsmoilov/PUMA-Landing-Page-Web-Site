@@ -4,16 +4,20 @@ import { Video } from "./components/Section/Video/Video";
 import { Feature } from "./components/Section/Feature/Feature";
 import { SignUp } from "./components/Section/Sign-Up/Sign-up";
 import { Footer } from "./components/Footer/Footer";
+import footwear from "./images/main/footwear.svg";
+import logo from "./images/logo/logo.svg";
+import video from "./images/section/video.svg";
+import SignUpImg from "./images/section/SignUp-img.svg";
 
 export const App = () => {
   return (
     <div className="App">
-      <Header logo="../../../images/logo/logo.svg" />
-      <Main footwear="../images/main/footwear.svg" />
-      <Video video="../../../images/section/video.svg" />
+      <Header logo={logo} />
+      <Main footwear={footwear} />
+      <Video video={video} />
       <Feature />
-      <SignUp SignUpImg="../../../../images/section/SignUp-img.svg" />
-      <Footer object={{ intro: "../../../images/logo/logo.svg" }} />
+      <SignUp SignUpImg={SignUpImg} />
+      <Footer intro={logo} />
     </div>
   );
 };
